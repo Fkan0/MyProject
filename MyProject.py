@@ -220,4 +220,36 @@ while True:
 
                 #Herşey yolunda giderse        
                 print(primedivisors(number))
-                continue                       
+                continue
+
+
+#BÖLEN BULMA SAYFASI
+    if maincode == "bölen":
+        print("BÖLEN BULMA SAYFASI")
+
+        while True:
+            code1 = input("")
+
+            #kullanıc anasayfaya dönmek istiyorsa
+            if code1 == "quit": 
+                break
+
+            #Kullanıcı yardım istiyorsa        
+            elif code1 == "help" or code1 == "yardım":
+                help()
+                continue
+            
+            #Kullanıcı Sayının asal olup olmadığını kontrol etmek istiyorsa
+            else:
+
+                #Kullanıcının tam sayı girip girmediği kontrol edilir
+                try:
+                    number = int(code1)
+            
+                except:
+                    print("Lütfen sadece TAM SAYI girin.")
+                    continue
+
+                #Herşey yolunda giderse        
+                print(numberdivisors(number))
+                continue                                        
