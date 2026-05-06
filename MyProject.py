@@ -353,3 +353,14 @@ while True:
                 #Herşey yolunda giderse        
                 print(fibonacci(number))
                 continue
+
+
+#Help komutu çalıştırılırsa
+    if maincode == "help" or maincode == "yardım":
+        help()
+
+#Çıkış yapılmak istenirse
+    if maincode == "quit":
+        print("BAŞARIYLA ÇIKIŞ YAPILDI")
+        break
+
