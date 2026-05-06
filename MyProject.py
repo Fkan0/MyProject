@@ -94,4 +94,26 @@ def intcontroller(number):
         int(number)
         return True
     except (ValueError, TypeError):
-        return False      
+        return False     
+
+#Yardım Fonksiyonu 
+def help():
+    print("""
+          KOMUT LİSTESİ
+          
+          SADECE ANA UYGULAMADA ÇALIŞIR
+          
+          'asal kontrolcü' : Asal sayı kontrol uygulamasına yönlendirir. 
+          'asal sayıcı' : Asal sayıcı uygulamasına yönlendirir.
+          'asal bölen' : Asal bölen uygulamasına yönlendirir.
+          'bölen' : bölen uygulamasına yönlendirir.
+          'obeb' : obeb uygulamasına yönlendirir.
+          'okek' : okek uygulamasına yönlendirir.
+          'fibonacci' : fibonacci uygulamasına yönlendirir.
+
+          HER DURUMDA ÇALIŞIR
+
+          'help' : komutları listeler açar.
+          'yardım' : komutları listeler.
+          'quit' : sayfadam çıkış yapar.
+""")
