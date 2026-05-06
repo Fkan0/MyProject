@@ -256,7 +256,7 @@ while True:
 
 
 #OBEB BULMA SAYFASI
-    if maincode == "bölen":
+    if maincode == "obeb":
         print("OBEB BULMA SAYFASI")
 
         while True:
@@ -290,7 +290,7 @@ while True:
 
 
 #OKEK BULMA SAYFASI
-    if maincode == "bölen":
+    if maincode == "okek":
         print("OKEK BULMA SAYFASI")
 
         while True:
@@ -320,4 +320,36 @@ while True:
 
                 #Herşey yolunda giderse        
                 print(okek(number1, number2))
-                continue                                                                                            
+                continue  
+
+
+#FİBONACCİSAYFASI
+    if maincode == "fibonacci":
+        print("BÖLEN BULMA SAYFASI")
+
+        while True:
+            code1 = input("")
+
+            #kullanıc anasayfaya dönmek istiyorsa
+            if code1 == "quit": 
+                break
+
+            #Kullanıcı yardım istiyorsa        
+            elif code1 == "help" or code1 == "yardım":
+                help()
+                continue
+            
+            #Kullanıcı Sayının asal olup olmadığını kontrol etmek istiyorsa
+            else:
+
+                #Kullanıcının tam sayı girip girmediği kontrol edilir
+                try:
+                    number = int(code1)
+            
+                except:
+                    print("Lütfen sadece TAM SAYI girin.")
+                    continue
+
+                #Herşey yolunda giderse        
+                print(fibonacci(number))
+                continue
