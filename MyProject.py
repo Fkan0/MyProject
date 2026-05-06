@@ -50,7 +50,7 @@ def primedivisors(number):
 
     return divisors
 
-#Sayının tüm bölenlerini liste halinde geri veren fonksiyon.
+#Sayının tüm bölenlerini liste halinde tersten geri veren fonksiyon.
 def numberdivisors(number):
     divisors = []
 
@@ -59,3 +59,14 @@ def numberdivisors(number):
             divisors.append(x)
 
     return divisors
+
+#İki sayının obeb'ini hesaplayan fonksiyon
+def obeb(number1, number2):
+
+    for x in numberdivisors(number1):
+
+        for y in numberdivisors(number2):
+
+            if x == y:
+
+                return x
