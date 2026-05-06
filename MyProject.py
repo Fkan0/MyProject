@@ -70,3 +70,8 @@ def obeb(number1, number2):
             if x == y:
 
                 return x
+            
+#İki sayının okek'ini hesaplayan fonksiyon.
+def okek(number1, number2):
+    
+    return (number1 * number2) // obeb(number1, number2)
