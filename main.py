@@ -1,251 +1,61 @@
 import controller 
 import my_math 
 
+
 #Uygulama hazırlık mesajları
 print("MyProject uygulamasına giriş yaptınız.")
 print("Yardım almak için 'help' veya 'yardım' yazın")
+
 
 #ANA SAYFA
 while True:
     print("ANASAYFA")
     maincode = input("")
 
+
 #ASAL SAYI KONTROLCÜ SAYFASI
     if maincode == "asal kontrolcü":
-        print("ASAL SAYI KONTROLCÜSÜ")
-
-        while True:
-            code1 = input("")
-
-            #kullanıc anasayfaya dönmek istiyorsa
-            if code1 == "quit": 
-                break
-
-            #Kullanıcı yardım istiyorsa        
-            elif code1 == "help" or code1 == "yardım":
-                controller.help()
-                continue
-            
-            #Kullanıcı Sayının asal olup olmadığını kontrol etmek istiyorsa
-            else:
-
-                #Kullanıcının tam sayı girip girmediği kontrol edilir
-                try:
-                    number = int(code1)
-            
-                except:
-                    print("Lütfen sadece TAM SAYI girin.")
-                    continue
-
-                #Herşey yolunda giderse        
-                print(my_math.primecontroller(number))
-                continue
+        controller.page1(my_math.primecontroller, "ASAL SAYI KONTROLCÜSÜ")
 
 
 #ASAL SAYI SIRALAMA SAYFASI
-    if maincode == "asal sayıcı":
-        print("ASAL SAYI SIRALAMA SAYFASI")
-
-        while True:
-            code1 = input("")
-
-            #kullanıc anasayfaya dönmek istiyorsa
-            if code1 == "quit": 
-                break
-
-            #Kullanıcı yardım istiyorsa        
-            elif code1 == "help" or code1 == "yardım":
-                controller.help()
-                continue
-            
-            #Kullanıcı Sayının asal olup olmadığını kontrol etmek istiyorsa
-            else:
-
-                #Kullanıcının tam sayı girip girmediği kontrol edilir
-                try:
-                    number = int(code1)
-            
-                except:
-                    print("Lütfen sadece TAM SAYI girin.")
-                    continue
-
-                #Herşey yolunda giderse        
-                print(my_math.primenumber(number))
-                continue 
+    elif maincode == "asal sayıcı":
+        controller.page1(my_math.primenumber, "ASAL SAYI SIRALAMA SAYFASI")
 
 
 #ASAL BÖLENLERİ BULMA SAYFASI
-    if maincode == "asal bölen":
-        print("ASAL BÖLENLERİ BULMA SAYFASI")
-
-        while True:
-            code1 = input("")
-
-            #kullanıc anasayfaya dönmek istiyorsa
-            if code1 == "quit": 
-                break
-
-            #Kullanıcı yardım istiyorsa        
-            elif code1 == "help" or code1 == "yardım":
-                controller.help()
-                continue
-            
-            #Kullanıcı Sayının asal olup olmadığını kontrol etmek istiyorsa
-            else:
-
-                #Kullanıcının tam sayı girip girmediği kontrol edilir
-                try:
-                    number = int(code1)
-            
-                except:
-                    print("Lütfen sadece TAM SAYI girin.")
-                    continue
-
-                #Herşey yolunda giderse        
-                print(my_math.primedivisors(number))
-                continue
+    elif maincode == "asal bölen":
+        controller.page1(my_math.primedivisors, "ASAL BÖLENLERİ BULMA SAYFASI")
 
 
 #BÖLEN BULMA SAYFASI
-    if maincode == "bölen":
-        print("BÖLEN BULMA SAYFASI")
-
-        while True:
-            code1 = input("")
-
-            #kullanıc anasayfaya dönmek istiyorsa
-            if code1 == "quit": 
-                break
-
-            #Kullanıcı yardım istiyorsa        
-            elif code1 == "help" or code1 == "yardım":
-                controller.help()
-                continue
-            
-            #Kullanıcı Sayının asal olup olmadığını kontrol etmek istiyorsa
-            else:
-
-                #Kullanıcının tam sayı girip girmediği kontrol edilir
-                try:
-                    number = int(code1)
-            
-                except:
-                    print("Lütfen sadece TAM SAYI girin.")
-                    continue
-
-                #Herşey yolunda giderse        
-                print(my_math
-                      .numberdivisors(number))
-                continue
+    elif maincode == "bölen":
+        controller.page1(my_math.numberdivisors, "BÖLEN BULMA SAYFASI")
 
 
 #OBEB BULMA SAYFASI
-    if maincode == "obeb":
-        print("OBEB BULMA SAYFASI")
-
-        while True:
-            code1 = input("")
-
-            #kullanıc anasayfaya dönmek istiyorsa
-            if code1 == "quit": 
-                break
-
-            #Kullanıcı yardım istiyorsa        
-            elif code1 == "help" or code1 == "yardım":
-                controller.help()
-                continue
-            
-            #Kullanıcı Sayının asal olup olmadığını kontrol etmek istiyorsa
-            else:
-                code2 = input("")
-
-                #Kullanıcının tam sayı girip girmediği kontrol edilir
-                try:
-                    number1 = int(code1)
-                    number2 = int(code2)
-            
-                except:
-                    print("Lütfen sadece TAM SAYI girin.")
-                    continue
-
-                #Herşey yolunda giderse        
-                print(my_math
-                      .obeb(number1, number2))
-                continue
+    elif maincode == "obeb":
+        controller.page2(my_math.obeb, "OBEB BULMA SAYFASI")
 
 
 #OKEK BULMA SAYFASI
-    if maincode == "okek":
-        print("OKEK BULMA SAYFASI")
-
-        while True:
-            code1 = input("")
-
-            #kullanıc anasayfaya dönmek istiyorsa
-            if code1 == "quit": 
-                break
-
-            #Kullanıcı yardım istiyorsa        
-            elif code1 == "help" or code1 == "yardım":
-                controller.help()
-                continue
-            
-            #Kullanıcı Sayının asal olup olmadığını kontrol etmek istiyorsa
-            else:
-                code2 = input("")
-
-                #Kullanıcının tam sayı girip girmediği kontrol edilir
-                try:
-                    number1 = int(code1)
-                    number2 = int(code2)
-            
-                except:
-                    print("Lütfen sadece TAM SAYI girin.")
-                    continue
-
-                #Herşey yolunda giderse        
-                print(my_math.okek(number1, number2))
-                continue  
+    elif maincode == "okek":
+        controller.page2(my_math.okek, "OKEK BULMA SAYFASI")
 
 
 #FİBONACCİSAYFASI
-    if maincode == "fibonacci":
-        print("BÖLEN BULMA SAYFASI")
-
-        while True:
-            code1 = input("")
-
-            #kullanıc anasayfaya dönmek istiyorsa
-            if code1 == "quit": 
-                break
-
-            #Kullanıcı yardım istiyorsa        
-            elif code1 == "help" or code1 == "yardım":
-                controller.help()
-                continue
-            
-            #Kullanıcı Sayının asal olup olmadığını kontrol etmek istiyorsa
-            else:
-
-                #Kullanıcının tam sayı girip girmediği kontrol edilir
-                try:
-                    number = int(code1)
-            
-                except:
-                    print("Lütfen sadece TAM SAYI girin.")
-                    continue
-
-                #Herşey yolunda giderse        
-                print(my_math.fibonacci(number))
-                continue
+    elif maincode == "fibonacci":
+        controller.page1(my_math.fibonacci, "FİBONACCİ SAYFASI")
 
 
 #Help komutu çalıştırılırsa
-    if maincode == "help" or maincode == "yardım":
+    elif maincode == "help" or maincode == "yardım":
         controller.help()
 
+
 #Çıkış yapılmak istenirse
-    if maincode == "quit":
+    elif maincode == "quit":
         print("BAŞARIYLA ÇIKIŞ YAPILDI")
         break
 
+#Bilinmeyen komut girilirse
