@@ -87,3 +87,11 @@ def fibonacci(number):
         index += 1
     
     return fibonacci_list
+
+#Verilen sayının tam sayı olup olmadığını kotrol eden foksiyon.
+def intcontroller(number):
+    try:
+        int(number)
+        return True
+    except (ValueError, TypeError):
+        return False      
