@@ -32,3 +32,25 @@ def primenumber(number):
 
 #Return olarak asal sayı listesinde dönüş yapar
     return primelist
+
+#Sayının asal bölenlerini liste halinde geri veren fonksiyon.
+def primedivisors(number):
+    divisors = []
+    variable_number = number
+
+    for i in primenumber(number):
+
+        while True:
+            if variable_number % i == 0:
+                variable_number /= i
+                divisors.append(i)
+
+            else:
+                break 
+
+    return divisors
+
+
+
+
+        
