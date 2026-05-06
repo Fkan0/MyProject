@@ -10,7 +10,7 @@ def primecontroller(number):
         
     return True #Girilen sayı asal sayı ise.
 
-#Girilen sayıya kadar asal sayıları yazan fonksiyon.
+#Girilen sayıya kadar asal sayıları liste halinde yazan fonksiyon.
 def primenumber(number):
     primelist = [] #Asal sayılar listesi.
     number = int(number) #Sayı integere çevrilir.
@@ -122,12 +122,12 @@ def help():
 print("MyProject uygulamasına giriş yaptınız.")
 print("Yardım almak için 'help' veya 'yardım' yazın")
 
-#Uygulama anasayfasına girş yapıldı
+#ANA SAYFA
 while True:
     print("ANASAYFA")
     maincode = input("")
 
-#Asal sayı kontrolcüsü sayfası
+#ASAL SAYI KONTROLCÜ SAYFASI
     if maincode == "asal kontrolcü":
         print("ASAL SAYI KONTROLCÜSÜ")
 
@@ -157,3 +157,35 @@ while True:
                 #Herşey yolunda giderse        
                 print(primecontroller(number))
                 continue
+
+
+#ASAL SAYI SIRALAMA SAYFASI
+    if maincode == "asal sayıcı":
+        print("ASAL SAYI SIRALAMA SAYFASI")
+
+        while True:
+            code1 = input("")
+
+            #kullanıc anasayfaya dönmek istiyorsa
+            if code1 == "quit": 
+                break
+
+            #Kullanıcı yardım istiyorsa        
+            elif code1 == "help" or code1 == "yardım":
+                help()
+                continue
+            
+            #Kullanıcı Sayının asal olup olmadığını kontrol etmek istiyorsa
+            else:
+
+                #Kullanıcının tam sayı girip girmediği kontrol edilir
+                try:
+                    number = int(code1)
+            
+                except:
+                    print("Lütfen sadece TAM SAYI girin.")
+                    continue
+
+                #Herşey yolunda giderse        
+                print(primenumber(number))
+                continue            
