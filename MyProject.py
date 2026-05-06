@@ -117,3 +117,43 @@ def help():
           'yardım' : komutları listeler.
           'quit' : sayfadam çıkış yapar.
 """)
+    
+#Uygulama hazırlık mesajları
+print("MyProject uygulamasına giriş yaptınız.")
+print("Yardım almak için 'help' veya 'yardım' yazın")
+
+#Uygulama anasayfasına girş yapıldı
+while True:
+    print("ANASAYFA")
+    maincode = input("")
+
+#Asal sayı kontrolcüsü sayfası
+    if maincode == "asal kontrolcü":
+        print("ASAL SAYI KONTROLCÜSÜ")
+
+        while True:
+            code1 = input("")
+
+            #kullanıc anasayfaya dönmek istiyorsa
+            if code1 == "quit": 
+                break
+
+            #Kullanıcı yardım istiyorsa        
+            elif code1 == "help" or code1 == "yardım":
+                help()
+                continue
+            
+            #Kullanıcı Sayının asal olup olmadığını kontrol etmek istiyorsa
+            else:
+
+                #Kullanıcının tam sayı girip girmediği kontrol edilir
+                try:
+                    number = int(code1)
+            
+                except:
+                    print("Lütfen sadece TAM SAYI girin.")
+                    continue
+
+                #Herşey yolunda giderse        
+                print(primecontroller(number))
+                continue
