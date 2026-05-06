@@ -73,5 +73,17 @@ def obeb(number1, number2):
             
 #İki sayının okek'ini hesaplayan fonksiyon.
 def okek(number1, number2):
-    
+
     return (number1 * number2) // obeb(number1, number2)
+
+#Belirtilen sayıda fibonacci serisi elemanını liste halinde verir.
+def fibonacci(number):
+    fibonacci_list = [1,1]
+    index = 0
+
+    while number > len(fibonacci_list):
+        new_number = fibonacci_list[index] + fibonacci_list[index + 1]
+        fibonacci_list.append(new_number)
+        index += 1
+    
+    return fibonacci_list
