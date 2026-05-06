@@ -253,6 +253,8 @@ while True:
                 #Herşey yolunda giderse        
                 print(numberdivisors(number))
                 continue
+
+
 #OBEB BULMA SAYFASI
     if maincode == "bölen":
         print("OBEB BULMA SAYFASI")
@@ -284,4 +286,38 @@ while True:
 
                 #Herşey yolunda giderse        
                 print(obeb(number1, number2))
-                continue                                                                                
+                continue
+
+
+#OKEK BULMA SAYFASI
+    if maincode == "bölen":
+        print("OKEK BULMA SAYFASI")
+
+        while True:
+            code1 = input("")
+
+            #kullanıc anasayfaya dönmek istiyorsa
+            if code1 == "quit": 
+                break
+
+            #Kullanıcı yardım istiyorsa        
+            elif code1 == "help" or code1 == "yardım":
+                help()
+                continue
+            
+            #Kullanıcı Sayının asal olup olmadığını kontrol etmek istiyorsa
+            else:
+                code2 = input("")
+
+                #Kullanıcının tam sayı girip girmediği kontrol edilir
+                try:
+                    number1 = int(code1)
+                    number2 = int(code2)
+            
+                except:
+                    print("Lütfen sadece TAM SAYI girin.")
+                    continue
+
+                #Herşey yolunda giderse        
+                print(okek(number1, number2))
+                continue                                                                                            
