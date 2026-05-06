@@ -50,7 +50,12 @@ def primedivisors(number):
 
     return divisors
 
+#Sayının tüm bölenlerini liste halinde geri veren fonksiyon.
+def numberdivisors(number):
+    divisors = []
 
+    for x in range(number + 1, 1, -1):
+        if number % x == 0:
+            divisors.append(x)
 
-
-        
+    return divisors
