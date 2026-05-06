@@ -9,3 +9,26 @@ def primecontroller(number):
             return False #Girilen sayı asal sayı değil ise.
         
     return True #Girilen sayı asal sayı ise.
+
+#Girilen sayıya kadar asal sayıları yazan fonksiyon.
+def primenumber(number):
+    primelist = [] #Asal sayılar listesi.
+    number = int(number) #Sayı integere çevrilir.
+
+#Sayı 2 den büyük ya da eşitse.
+    if number >= 2:
+
+        for i in range (2, number + 1): #Asal olmasu beklenen sayı.
+            prime = True
+
+            for j in range (2, int(i ** 0.5) + 1): #Bölen sayısı.
+                if i % j == 0:
+                    prime = False
+                    break
+
+#Eğer i asal sayı ise listeye eklenir
+            if prime == True:
+                primelist.append(i)
+
+#Return olarak asal sayı listesinde dönüş yapar
+    return primelist
